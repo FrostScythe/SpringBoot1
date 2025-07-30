@@ -31,6 +31,8 @@ public class FirstAppApplication {
 
 		System.out.println("Emp1  is: "+ emp1);
 		System.out.println("Adrs1  is: "+ adrs1);
+
+		adrs1.streetame ="new street";
 		 */
 
 		//loose coupling
@@ -52,5 +54,15 @@ public class FirstAppApplication {
 		System.out.println("Adrs2  is: "+ adrs2);
 
 		emp2.getAddress().setStreetName("new street");
+
+		// constructor ijuction
+		// need to pass the data in same order
+		Address adrs3= new Address(456, "oldstreet","oldcity");
+		Employee emp3= new Employee(234,"sam", "sam@g.com","developer",adrs3);
+
+		System.out.println("Emp3  is: "+ emp3);
+		System.out.println("Adrs3 is: "+ adrs3);
+
+		emp3.getAddress().setStreetName("new street");
 	}
 }
